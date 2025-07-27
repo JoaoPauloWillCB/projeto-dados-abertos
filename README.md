@@ -22,7 +22,7 @@ PASSO A PASSO PARA EXECUTAR O PROJETO
   -- password: secret
 9. Rodar as Migrations
   -- 'php artisan migrate'
-10. Iniciar o Servidor Laravel
-  -- 'php artisan serve --host=0.0.0.0 --port=8000' acessar: 'http://localhost:8000'
-11. Processar as despesas dos deputados
+10. Processar as despesas dos deputados
   -- 'php artisan queue:work'
+11. Iniciar o Servidor Laravel
+  -- 'php artisan serve --host=0.0.0.0 --port=8000' acessar: 'http://localhost:8000'
