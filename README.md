@@ -3,11 +3,26 @@ PASSO A PASSO PARA EXECUTAR O PROJETO
 1. Clonar o Repositório
 2. Subir os Containers com Docker
   - 'docker compose up -d --build'
-4. Acessar o Container do Laravel
-  - 'docker exec -it app bash'
-3. Rodar as Migrations
+3. Acessar o Container do Laravel
+  - 'docker exec -it laravel_app bash'
+4. Instalar dependencias 
+  - 'composer install'
+5. Gere a chave da aplicação
+  - 'php artisan key:generate'
+6. Criar conexão com banco MySQl com as seguintes caracteristicas:
+  - username: laravel
+  - password: secret
+7. Modificar o nome do arquivo .env.example para '.env'
+8. Editar o .env para apontar para o banco MySQL do container
+  - DB_CONNECTION=mysql
+    DB_HOST=mysql
+    DB_PORT=3306
+    DB_DATABASE=laravel
+    DB_USERNAME=laravel
+    DB_PASSWORD=secret
+9. Rodar as Migrations
   - 'php artisan migrate'
-4. Iniciar o Servidor Laravel
+10. Iniciar o Servidor Laravel
   - 'php artisan serve --host=0.0.0.0 --port=8000' acessar: 'http://localhost:8000'
-5. Processar os Deputados e Suas Despesas
+11. Processar as despesas dos deputados
   - 'php artisan queue:work'
