@@ -7,11 +7,6 @@ PASSO A PASSO PARA EXECUTAR O PROJETO
   - 'docker exec -it laravel_app bash'
 4. Instalar dependencias 
   - 'composer install'
-5. Gere a chave da aplicação
-  - 'php artisan key:generate'
-6. Criar conexão com banco MySQl com as seguintes caracteristicas:
-  - username: laravel
-  - password: secret
 7. Modificar o nome do arquivo .env.example para '.env'
 8. Editar o .env para apontar para o banco MySQL do container
   - DB_CONNECTION=mysql
@@ -20,6 +15,11 @@ PASSO A PASSO PARA EXECUTAR O PROJETO
     DB_DATABASE=laravel
     DB_USERNAME=laravel
     DB_PASSWORD=secret
+5. Gere a chave da aplicação
+  - 'php artisan key:generate'
+6. Criar conexão com banco MySQl com as seguintes caracteristicas:
+  - username: laravel
+  - password: secret
 9. Rodar as Migrations
   - 'php artisan migrate'
 10. Iniciar o Servidor Laravel
